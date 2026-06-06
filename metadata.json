@@ -1,0 +1,6 @@
+{
+  "name": "AuraStudy",
+  "description": "An AI-Powered 'Second Brain' Study Suite featuring a dynamic color theme switcher, structured synthesis tools, and beautiful visual templates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

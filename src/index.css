@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-brutal: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-bg-base: var(--bg-base);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-accent: var(--border-accent);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-card-bg: var(--card-bg);
+  
+  --shadow-brutal: var(--shadow-brutal);
+}
+
+:root {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 1. Midnight Theme: Obsidian, Purple, and Cyan */
+[data-theme="midnight"] {
+  --bg-base: #0B0B0F;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --border-accent: #8B5CF6; /* Electric Purple */
+  --accent-primary: #A78BFA;
+  --accent-secondary: #22D3EE; /* Bright Cyan */
+  --card-bg: #12121A;
+  --shadow-brutal: 0 0 15px rgba(139, 92, 246, 0.15), 0 0 5px rgba(34, 211, 238, 0.1);
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+/* 2. Vaporwave Theme: Dark Purple, Hot Pink, and Lime Green */
+[data-theme="vaporwave"] {
+  --bg-base: #18092C;
+  --text-primary: #FFE4FA;
+  --text-secondary: #C084FC;
+  --border-accent: #EC4899; /* Hot Pink */
+  --accent-primary: #F43F5E; /* Hot Pink Accent */
+  --accent-secondary: #84CC16; /* Lime Green */
+  --card-bg: #271042;
+  --shadow-brutal: 0 0 20px rgba(236, 72, 153, 0.25);
+  --font-heading: 'Syne', sans-serif;
+}
+
+/* 3. Minimal Light Theme: White, Black Border, Brutalist Shadow */
+[data-theme="minimal-light"] {
+  --bg-base: #FAFAFA;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --border-accent: #000000;
+  --accent-primary: #000000;
+  --accent-secondary: #2563EB; /* Royal Blue */
+  --card-bg: #FFFFFF;
+  --shadow-brutal: 5px 5px 0px 0px #000000;
+  --font-heading: 'Syne', sans-serif;
+}
+
+/* 4. Cyberpunk Acid Theme: Neon Yellow, Purple Accent, Black */
+[data-theme="cyberpunk"] {
+  --bg-base: #0B0716;
+  --text-primary: #F8FAFC;
+  --text-secondary: #FACC15;
+  --border-accent: #FACC15;
+  --accent-primary: #EC4899;
+  --accent-secondary: #10B981;
+  --card-bg: #1B0F2E;
+  --shadow-brutal: 4px 4px 0px 0px #FACC15;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+/* 5. Emerald Moss Theme: Cozy deep greens and warm ambers */
+[data-theme="forest"] {
+  --bg-base: #0E1A14;
+  --text-primary: #EEFDF4;
+  --text-secondary: #34D399;
+  --border-accent: #F59E0B;
+  --accent-primary: #10B981;
+  --accent-secondary: #F59E0B;
+  --card-bg: #172820;
+  --shadow-brutal: 5px 5px 0px 0px #10B981;
+  --font-heading: 'Syne', sans-serif;
+}
+
+/* 6. Warm Espresso Theme: Cozy latte colors and coffee tones */
+[data-theme="coffee"] {
+  --bg-base: #1B120F;
+  --text-primary: #FDF9F7;
+  --text-secondary: #C27D56;
+  --border-accent: #C27D56;
+  --accent-primary: #C27D56;
+  --accent-secondary: #EA580C;
+  --card-bg: #291B16;
+  --shadow-brutal: 5px 5px 0px 0px #C27D56;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+/* 7. Modern Slate Theme: Extremely eye friendly, simple, and ultra-modern */
+[data-theme="modern-slate"] {
+  --bg-base: #0F172A;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-accent: #334155;
+  --accent-primary: #38BDF8; /* Calming Sky Blue */
+  --accent-secondary: #818CF8; /* Soft Indigo */
+  --card-bg: #1E293B;
+  --shadow-brutal: 0 4px 20px 0 rgba(15, 23, 42, 0.4);
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+/* 8. Custom Theme Builder values */
+[data-theme="custom"] {
+  --bg-base: var(--custom-bg-base, #111827);
+  --text-primary: var(--custom-text-primary, #F9FAFB);
+  --text-secondary: var(--custom-text-secondary, #9CA3AF);
+  --border-accent: var(--custom-border-accent, #6366F1);
+  --accent-primary: var(--custom-accent-primary, #4F46E5);
+  --accent-secondary: var(--custom-accent-secondary, #10B981);
+  --card-bg: var(--custom-card-bg, #1F2937);
+  --shadow-brutal: var(--custom-shadow-brutal, 5px 5px 0px 0px #6366F1);
+  --font-heading: var(--custom-font-heading, 'Inter', sans-serif);
+}
+
+/* Glowing text utilities */
+.glow-purple {
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+}
+
+.glow-pink {
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.6);
+}
+
+.glow-green {
+  text-shadow: 0 0 10px rgba(132, 204, 22, 0.6);
+}
+
+/* Scanline and Retro Overlay Utilities silenced for eye-friendliness */
+.scanlines {
+  position: relative;
+}
+
+.scanline-sweep {
+  display: none;
+}
+
+/* High contrast custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+
+/* Custom animation delay classes */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
