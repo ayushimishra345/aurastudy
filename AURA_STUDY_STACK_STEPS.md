@@ -4,6 +4,7 @@ This reference document explains how AuraStudy operates and provides the instruc
 
 ---
 
+
 ## 1. Project Directory Structure
 Below is are the folder hierarchies for both our **unified Express + Vite live preview setup** and a **decoupled Next.js + FastAPI production stack**:
 
