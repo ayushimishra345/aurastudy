@@ -3,8 +3,6 @@
 This reference document explains how AuraStudy operates and provides the instructions, requirements, and codebase mappings to port this application to other environments such as a separate **Next.js (TypeScript) Frontend** + **FastAPI (Python) Backend**.
 
 ---
-
-
 ## 1. Project Directory Structure
 Below is are the folder hierarchies for both our **unified Express + Vite live preview setup** and a **decoupled Next.js + FastAPI production stack**:
 
